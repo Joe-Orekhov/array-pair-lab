@@ -19,11 +19,46 @@ const coursePhases = [
 ]
 
 // Write your functions here!
+function sortCohortDesc() {
+    ourCohort.sort()    
+    return ourCohort.reverse()
+}
 
+function shortNames() {
+    return ourCohort.filter(name => name.length < 15)
 
+}
+    
+function cohortSize() {
+   return ourCohort.length
+}
 
+function locateStudent(x) {
+   const name = ourCohort.indexOf(x)
+   return ourCohort[name]
+}
 
+ function phaseNames(){
+   return coursePhases.map(x => x.name)
+}
 
+function cohortPhases(){
+    return coursePhases.filter(x => x.language === 'JavaScript')
+ }
+
+function allTheGabes(){
+    return ourCohort.filter(x => x.includes("Gabriel"))
+}
+
+function studentAndPhase(){
+    return ourCohort.map(x => x + 'is in Phase one')
+}
+
+function sortPhasesByName(){
+    newArr = (ourCohort.map(x => x + 'is in Phase one'))
+    return newArr.sort()
+    
+}
 
 
 
